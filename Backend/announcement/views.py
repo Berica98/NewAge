@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Announcment
 from .models import Class
-from django.db.models import Q
+#from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from .serializers import AnouncmentSerializer
 from rest_framework.decorators import api_view
