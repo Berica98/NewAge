@@ -13,3 +13,4 @@ Endpoint of api's
 http://localhost:8000/api/v1/announcement/
 http://localhost:8000/api/v1/announcement/<int:class_id>/ (the class_id represent the classes eg: 1=js1, 2=js2,....6=ss3)
 http://localhost:8000/api/v1/students
+http://localhost:8000/api/v1/students/login/
