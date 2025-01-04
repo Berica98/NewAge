@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'registration',
     'subjects',
+    'teachers',
 ]
 
 MIDDLEWARE = [

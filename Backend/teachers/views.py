@@ -4,8 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from rest_framework import status
-from your_app_name.models import Teacher  # Replace `your_app_name` with your app name
-from your_app_name.serializers import TeacherSerializer
+from teachers.models import Teachers  # Replace `your_app_name` with your app name
+from teachers.serializers import TeacherSerializer
 
 
 class JSONResponse(HttpResponse):
@@ -24,7 +24,7 @@ def teacher_list(request):
     Handle GET and POST requests for the Teacher model.
     """
     if request.method == 'GET':
-        teachers = Teacher.objects.all()
+        teachers = Teachers.objects.all()
         teachers_serializer = TeacherSerializer(teachers, many=True)
         return JSONResponse(teachers_serializer.data)
 
@@ -43,8 +43,8 @@ def teacher_detail(request, pk):
     Handle GET, PUT, and DELETE requests for a single Teacher instance.
     """
     try:
-        teacher = Teacher.objects.get(pk=pk)
-    except Teacher.DoesNotExist:
+        teacher = Teachers.objects.get(pk=pk)
+    except Teachers.DoesNotExist:
         return HttpResponse(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'GET':

@@ -1,19 +1,14 @@
 from django.db import models
+from gender.models import gender
 
 # Create your models here.
 
 class Teachers(models.Model):
-        GENDER_CHOICES = [
-                ('M', 'Male'),
-                ('F', 'Female'),
-                ('O', 'Other'),
-        ]
-
         first_name = models.CharField(max_length=50)
         last_name = models.CharField(max_length=50)
         email = models.EmailField(unique=True)
         phone_number = models.CharField(max_length=15, null=True, blank=True)
-        gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+        gender = models.ForeignKey(gender,on_delete=models.CASCADE )
         employee_id = models.CharField(max_length=20, unique=True)
         qualification = models.TextField(null=True, blank=True)
         date_joined = models.DateField()

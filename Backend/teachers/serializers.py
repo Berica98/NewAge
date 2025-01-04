@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from teachers.models import Teacher  
+from teachers.models import Teachers  
 class TeacherSerializer(serializers.Serializer):
     pk = serializers.IntegerField(read_only=True)  
     first_name = serializers.CharField(max_length=50)
@@ -14,7 +14,7 @@ class TeacherSerializer(serializers.Serializer):
         """
         Create and return a new `Teacher` instance, given the validated data.
         """
-        return Teacher.objects.create(**validated_data)
+        return Teachers.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         """
