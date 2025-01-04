@@ -22,7 +22,7 @@ class Registration(models.Model):
     username = models.CharField(max_length=200,unique=True,blank=True)
     password = models.CharField(max_length=200, blank=True)
     image = models.ImageField(upload_to='images/')
-    subjects = models.ManyToManyField(subjects)
+    subjects = models.ManyToManyField(subjects, blank=True)
     date_of_registration = models.DateTimeField(default=now)
     
 
@@ -51,7 +51,14 @@ class Registration(models.Model):
             self.password = self.generate_unique_username() #making username to be same as passwowrd
             if not self.password.startswith('pbkdf2_'): # Avoid re-hashing
                 self.password = make_password(self.password)
+
+         # Automatically assign subjects based on the selected class
+        if not self.pk:  # Check if it's a new registration
+            assigned_subjects = subjects.objects.filter(class_assigned=self.class_assigned)
+            super().save(*args, **kwargs)  # Save instance before adding subjects
+            self.subjects.set(assigned_subjects)  # Assign the subjects
         super().save(*args, **kwargs)
+
 
     
     def __str__(self):

@@ -5,6 +5,9 @@ from .serializers import RegistrationSerializer
 from django.contrib.auth.hashers import check_password
 from django.views.decorators.csrf import csrf_exempt
 import json
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from subjects.models import subjects
 
 from rest_framework.decorators import api_view
 
@@ -61,3 +64,14 @@ def login_view(request):
     else:
         return JsonResponse({"success": False, "message": "Invalid request method. Use POST."}, status=405)
 
+
+
+
+@receiver(post_save, sender=Registration)
+def assign_subjects(sender, instance, created, **kwargs):
+    """
+    Automatically assign subjects to students based on their class_assigned.
+    """
+    if created:  # Ensure it only runs when a new student is registered
+        subject = subjects.objects.filter(class_assigned=instance.class_assigned)
+        instance.subjects.set(subject)  # Assign all subjects to the student
