@@ -1,0 +1,39 @@
+{
+  "name": "newage-frontend",
+  "version": "1.0.0",
+  "description": "A frontend application for NewAge, a platform for managing secondary school student life, grades, curriculum, counselor access, and more.",
+  "main": "src/index.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.51.0",
+    "prettier": "^3.1.0",
+    "vite": "^4.4.9"
+  },
+  "keywords": [
+    "newage",
+    "students",
+    "grades",
+    "counselors",
+    "parents",
+    "education"
+  ],
+  "author": "Experienced Frontend Developer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=8.x"
+  }
+}
