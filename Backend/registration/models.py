@@ -41,7 +41,13 @@ class Registration(models.Model):
             date_of_registration__year=current_year
         ).count()
         
-        return f"{prefix}/{current_year:02}/{class_code}/{specail_code}/{existing_count + 1:03d}"
+        username = f"{prefix}/{current_year:02}/{class_code}/{specail_code}/{existing_count + 1:03d}"
+
+        while Registration.objects.filter(username=username).exists():
+            existing_count += 1
+            username = f"{prefix}/{current_year:02}/{class_code}/{specail_code}/{existing_count + 1:03d}"
+
+        return username
     """
     save it to database
     """
@@ -62,4 +68,4 @@ class Registration(models.Model):
 
     
     def __str__(self):
-        return f"Student ID:  {self.username}passworld id:  {self.password} "
+        return f"Student ID:  {self.username}"
