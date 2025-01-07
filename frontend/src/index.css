@@ -1,0 +1,49 @@
+/* General and Typography */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 10px 0;
+  color: #4CAF50;
+  text-align: center;
+}
+
+p {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+/* Link Styling */
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility Classes */
+.page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 15px;
+}
+
