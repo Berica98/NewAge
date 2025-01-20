@@ -5,3 +5,7 @@
 
 [functions]
   directory = "backend/netlify/functions"
+
+[build.environment]
+  PYTHON_VERSION = "3.8.10"  # Replace with your desired Python version
+  RUBY_VERSION = "2.7.2"    # Replace with your desired Ruby version
