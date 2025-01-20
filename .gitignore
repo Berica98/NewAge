@@ -1,2 +1,12 @@
-# Local Netlify folder
-.netlify
+# Ignore Netlify folder (optional if you no longer use Netlify)
+# .netlify
+
+# Ignore build directory (frontend production build)
+frontend/build/
+
+# Ignore node_modules directory
+backend/node_modules/
+frontend/node_modules/
+
+# Ignore any environment-specific files
+*.env
