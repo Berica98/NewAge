@@ -5,6 +5,6 @@
     "jsonwebtoken": "^9.0.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node api/server.js"
   }
 }
