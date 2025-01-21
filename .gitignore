@@ -1,5 +1,4 @@
-# Ignore build directory (production build)
-build/
+
 
 # Ignore node_modules directory
 node_modules/
@@ -7,5 +6,4 @@ node_modules/
 # Ignore any environment-specific files
 *.env
 
-# Ignore public directory
-public/
+
