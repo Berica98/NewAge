@@ -11,13 +11,5 @@
       "src": "/(.*)",
       "dest": "api/server.js"
     }
-  ],
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "npm": {
-      "dev": "false"
-    }
-  }
+  ]
 }
