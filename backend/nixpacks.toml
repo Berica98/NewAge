@@ -1,5 +1,0 @@
-[build]
-engine = "nodejs"
-
-[processes]
-web = "npm start"
