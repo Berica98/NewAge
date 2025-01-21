@@ -4,8 +4,8 @@ const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs'); // For password hashing
 const cors = require('cors'); // For enabling CORS requests
 
-// Load environment variables from .env file
-dotenv.config();
+// Load environment variables from .env file in the parent directory
+dotenv.config({ path: '../.env' });
 
 // Initialize Express app
 const app = express();
@@ -15,7 +15,10 @@ app.use(express.json()); // Parse incoming JSON requests
 console.log('MONGO_URI:', process.env.MONGO_URI); // Log MongoDB URI for troubleshooting
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log('MongoDB Connected Successfully'))
   .catch((err) => {
     console.error('Error connecting to MongoDB:', err.message);

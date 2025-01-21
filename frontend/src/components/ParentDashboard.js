@@ -129,7 +129,7 @@ const ParentDashboard = () => {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         .container {
           margin: 20px;
           font-family: Arial, sans-serif;
@@ -179,4 +179,3 @@ const ParentDashboard = () => {
 };
 
 export default ParentDashboard;
-

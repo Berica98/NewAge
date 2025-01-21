@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css'; // Importing the external stylesheet
 
 // Sample Data for Grades and Assignments
 const studentData = {
@@ -8,28 +9,27 @@ const studentData = {
       { name: "English", grade: "A", assignment: "Write a composition on 'My Country'" },
       { name: "Integrated Science", grade: "B", assignment: "Experiment: Chemical Reactions" },
       { name: "Social Studies", grade: "C+", assignment: "Write a report on Nigerian history" },
-      { name: "Computer Science", grade: "B", assignment: "Complete programming challenge on variables" }
+      { name: "Computer Science", grade: "B", assignment: "Complete programming challenge on variables" },
     ],
   },
   seniorSecondary: {
     scienceSubjects: [
       { name: "Physics", grade: "B", assignment: "Laboratory report on laws of motion" },
       { name: "Chemistry", grade: "A-", assignment: "Experiment: Acid-Base Reactions" },
-      { name: "Biology", grade: "A", assignment: "Research on Genetics" }
+      { name: "Biology", grade: "A", assignment: "Research on Genetics" },
     ],
     artSubjects: [
       { name: "Fine Art", grade: "B+", assignment: "Draw a human portrait" },
-      { name: "Music", grade: "B", assignment: "Compose a simple song" }
+      { name: "Music", grade: "B", assignment: "Compose a simple song" },
     ],
     commercialSubjects: [
       { name: "Accounting", grade: "A", assignment: "Prepare balance sheet" },
-      { name: "Economics", grade: "B-", assignment: "Write an essay on demand and supply" }
-    ]
-  }
-}
+      { name: "Economics", grade: "B-", assignment: "Write an essay on demand and supply" },
+    ],
+  },
+};
 
 const StudentDashboard = () => {
-
   const [isJunior, setIsJunior] = useState(true); // Switch between Junior Secondary and Senior Secondary
 
   const handleSwitchGradeLevel = () => {
@@ -92,40 +92,6 @@ const StudentDashboard = () => {
           ))}
         </div>
       )}
-
-      <style jsx>{`
-        .container {
-          margin: 20px;
-          font-family: Arial, sans-serif;
-        }
-        .grade-section {
-          margin-top: 20px;
-        }
-        .subject {
-          margin: 10px 0;
-          padding: 10px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-        }
-        button {
-          padding: 10px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          margin-bottom: 20px;
-        }
-        button:hover {
-          background-color: #0056b3;
-        }
-        h1 {
-          font-size: 2rem;
-        }
-        h2 {
-          font-size: 1.5rem;
-        }
-      `}</style>
     </div>
   );
 };

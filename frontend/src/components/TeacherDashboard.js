@@ -8,42 +8,41 @@ const teacherData = {
       { name: "English", classAverage: "A" },
       { name: "Integrated Science", classAverage: "B" },
       { name: "Social Studies", classAverage: "C+" },
-      { name: "Computer Science", classAverage: "B" }
+      { name: "Computer Science", classAverage: "B" },
     ],
     seniorSecondary: {
       scienceSubjects: [
         { name: "Physics", classAverage: "B" },
         { name: "Chemistry", classAverage: "A-" },
-        { name: "Biology", classAverage: "A" }
+        { name: "Biology", classAverage: "A" },
       ],
       artSubjects: [
         { name: "Fine Art", classAverage: "B+" },
-        { name: "Music", classAverage: "B" }
+        { name: "Music", classAverage: "B" },
       ],
       commercialSubjects: [
         { name: "Accounting", classAverage: "A" },
-        { name: "Economics", classAverage: "B-" }
-      ]
-    }
+        { name: "Economics", classAverage: "B-" },
+      ],
+    },
   },
   assignments: [
     { subject: "Mathematics", assignment: "Complete geometry problems", deadline: "2025-01-15", status: "Assigned" },
     { subject: "Integrated Science", assignment: "Experiment: Chemical Reactions", deadline: "2025-01-17", status: "Assigned" },
-    { subject: "Chemistry", assignment: "Research on acids and bases", deadline: "2025-01-20", status: "Assigned" }
+    { subject: "Chemistry", assignment: "Research on acids and bases", deadline: "2025-01-20", status: "Assigned" },
   ],
   attendance: {
     totalStudents: 30,
     absentStudents: 5,
-    presentStudents: 25
+    presentStudents: 25,
   },
   importantNotes: [
     { message: "Final Exam preparation starts on 2025-03-17", isRead: false },
-    { message: "Next Class Meeting rescheduled to 2025-04-14", isRead: true }
-  ]
+    { message: "Next Class Meeting rescheduled to 2025-04-14", isRead: true },
+  ],
 };
 
 const TeacherDashboard = () => {
-
   const [isJunior, setIsJunior] = useState(true); // Switch between Junior Secondary and Senior Secondary
   const handleSwitchGradeLevel = () => {
     setIsJunior(!isJunior);
@@ -60,7 +59,6 @@ const TeacherDashboard = () => {
       <div className="grades-section">
         <h2>{isJunior ? "Junior Secondary" : "Senior Secondary"} Class Average Grades</h2>
 
-        {/* Junior Secondary Grades */}
         {isJunior && (
           <div className="grade-list">
             {teacherData.grades.juniorSecondary.map((subject, index) => (
@@ -72,7 +70,6 @@ const TeacherDashboard = () => {
           </div>
         )}
 
-        {/* Senior Secondary Grades */}
         {!isJunior && (
           <div className="grade-list">
             <h3>Science Subjects</h3>
@@ -130,52 +127,6 @@ const TeacherDashboard = () => {
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        .container {
-          margin: 20px;
-          font-family: Arial, sans-serif;
-        }
-        .grade-list, .assignment, .attendance-section, .important-notes-section {
-          margin-top: 20px;
-        }
-        .subject, .assignment, .attendance-section, .important-notes-section {
-          margin-bottom: 10px;
-          padding: 10px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-        }
-        h1, h2 {
-          font-size: 1.5rem;
-        }
-        h3 {
-          font-size: 1.3rem;
-        }
-        h4 {
-          font-size: 1.1rem;
-        }
-        button {
-          padding: 10px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          margin-bottom: 20px;
-        }
-        button:hover {
-          background-color: #0056b3;
-        }
-        .read-status, .unread-status {
-          font-size: 0.9rem;
-        }
-        .read-note {
-          background-color: #e0f7fa;
-        }
-        .unread-note {
-          background-color: #ffebee;
-        }
-      `}</style>
     </div>
   );
 };

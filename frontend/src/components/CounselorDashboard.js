@@ -71,14 +71,18 @@ const CounselorDashboard = () => {
                 <td>2025-01-10</td>
                 <td>11:00 AM</td>
                 <td>Career Guidance</td>
-                <td><Button variant="success">Start Session</Button></td>
+                <td>
+                  <Button variant="success">Start Session</Button>
+                </td>
               </tr>
               <tr>
                 <td>Anita Okoro</td>
                 <td>2025-01-11</td>
                 <td>2:00 PM</td>
                 <td>Behavioral Issues</td>
-                <td><Button variant="success">Start Session</Button></td>
+                <td>
+                  <Button variant="success">Start Session</Button>
+                </td>
               </tr>
             </tbody>
           </Table>
@@ -110,8 +114,8 @@ const CounselorDashboard = () => {
               <Accordion.Header>Feedback from Parents</Accordion.Header>
               <Accordion.Body>
                 <p>
-                  Parent of Bayo Ogundele: "We appreciate the career guidance
-                  program; Bayo seems more focused on his aspirations now."
+                  Parent of Bayo Ogundele: &quot;We appreciate the career guidance
+                  program; Bayo seems more focused on his aspirations now.&quot;
                 </p>
               </Accordion.Body>
             </Accordion.Item>

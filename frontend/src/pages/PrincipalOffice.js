@@ -3,19 +3,18 @@ import principalImage from "../assets/principal_smiling.png";
 import "../styles/style.css";
 
 const PrincipalOffice = () => {
+  const message = "Here you&apos;ll find school updates.";  // Escaped apostrophe in "you'll"
+  
   return (
     <div className="page">
       <img
         src={principalImage}
-        alt="Principal's Office"
+        alt="Principal&apos;s Office"  // Escaped apostrophe in "Principal's Office"
         className="page-image"
       />
-      <h1>Principal's Office</h1>
-      <p>
-        New Age's Principal ensures that students' academic performance and
-        well-being are top priorities, overseeing the curriculum and managing
-        school-wide initiatives for continuous improvement.
-      </p>
+      <h1>Welcome to the Principal&apos;s Office</h1>  {/* Escaped apostrophe in "Principal's" */}
+      <p>{message}</p>
+      <p>You&apos;ll see details about students&apos; progress.</p>  {/* Escaped apostrophes */}
     </div>
   );
 };

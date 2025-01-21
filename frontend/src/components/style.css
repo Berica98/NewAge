@@ -1,0 +1,193 @@
+/* General Dashboard Styles */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  height: 100vh; /* Full-height sidebar */
+  position: sticky;
+  top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.dashboard-body {
+  width: 80%;
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+}
+
+.dashboard-card {
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.dashboard-btn {
+  margin-right: 10px;
+}
+
+.metric-card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card .btn {
+  margin-top: 10px;
+}
+
+/* Student Dashboard Specific Styles */
+.container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.grade-section {
+  margin-top: 20px;
+}
+
+.subject {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+p {
+  margin: 5px 0;
+}
+
+/* TeacherDashboard Specific Styles */
+.grades-section {
+  margin-top: 20px;
+}
+
+.grade-list {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.subject {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.assignment {
+  background-color: #fff8e1;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.attendance-section {
+  margin-top: 30px;
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.important-notes-section {
+  margin-top: 20px;
+}
+
+.read-note {
+  background-color: #e8f5e9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.unread-note {
+  background-color: #ffebee;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.read-status,
+.unread-status {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.read-status {
+  background-color: #aed581;
+  color: #ffffff;
+}
+
+.unread-status {
+  background-color: #ef9a9a;
+  color: #ffffff;
+}
