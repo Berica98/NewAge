@@ -13,11 +13,14 @@
   "description": "",
   "dependencies": {
     "@babel/eslint-parser": "^7.26.5",
+    "axios": "^1.7.9",
+    "cookie": "^1.0.2",
     "eslint-webpack-plugin": "^4.2.0",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^18.2.0",
+    "react-router": "^7.1.3",
     "react-router-dom": "^7.1.3"
   },
   "devDependencies": {
