@@ -9,6 +9,3 @@ node_modules/
 
 # Ignore public directory
 public/
-
-# Ignore the frontend if no longer used
-frontend/
