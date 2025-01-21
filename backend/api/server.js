@@ -40,6 +40,11 @@ const hashPassword = async (password) => {
   return await bcrypt.hash(password, salt);
 };
 
+// Root Route to Test if the server is up and running
+app.get('/', (req, res) => {
+  res.send('Backend Server is Running');
+});
+
 // Admin Registration Route
 app.post('/admin/register', async (req, res) => {
   const { email, password } = req.body;
