@@ -2,9 +2,16 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.7",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "express": "^4.17.3",  // Add express if it's missing from the dependencies
+    "mongoose": "^6.0.5",  // Add mongoose if it's missing from the dependencies
+    "cors": "^2.8.5" // Include cors if needed for API requests
   },
   "scripts": {
-    "start": "node api/server.js"
+    "start": "node api/server.js",
+    "build": "echo \"No build step\""
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
