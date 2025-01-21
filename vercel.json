@@ -5,7 +5,7 @@
       "src": "frontend/package.json",
       "use": "@vercel/react",
       "config": {
-        "distDir": "build"  
+        "distDir": "frontend/build" 
       }
     },
     {
