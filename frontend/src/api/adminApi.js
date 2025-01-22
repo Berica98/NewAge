@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Replace API_URL with your backend URL
-const API_URL = 'http://localhost:5000';
+// Use environment variable for flexibility, with a fallback for local development
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 export const loginAdmin = async (credentials) => {
     const response = await axios.post(`${API_URL}/admin/login`, credentials);

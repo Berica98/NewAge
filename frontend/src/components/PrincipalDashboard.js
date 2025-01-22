@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Footer from './Footer'; // Assuming Footer component is available
 import './style.css'; // Import style.css from the same directory
 
 // Sidebar Component
@@ -85,7 +84,6 @@ const PrincipalDashboard = () => {
           </Container>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
