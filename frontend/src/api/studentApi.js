@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Replace API_URL with your backend URL
-const API_URL = 'http://localhost:5000';
+// Directly set the deployed backend URL instead of using the environment variable
+const API_URL = 'https://newage-backend.vercel.app';  
 
 export const registerStudent = async (credentials) => {
   const response = await axios.post(`${API_URL}/student/register`, credentials);

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use environment variable for flexibility, with a fallback for local development
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+// Directly set the deployed backend URL instead of using the environment variable
+const API_URL = 'https://newage-backend.vercel.app';  
 
 export const loginAdmin = async (credentials) => {
     const response = await axios.post(`${API_URL}/admin/login`, credentials);
